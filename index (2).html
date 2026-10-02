@@ -1,0 +1,546 @@
+```html
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Farisya ❤️</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    font-family: "Comic Sans MS", cursive;
+
+    background:
+        radial-gradient(circle at 50% 40%, #fff0f6, #ffc9dd 45%, #ff9fbe);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #8b3154;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+
+    font-size: 25px;
+
+    animation: float 7s linear infinite;
+
+    opacity: 0;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MAIN SCREEN
+========================= */
+
+.scene {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+
+    width: 90%;
+
+    max-width: 600px;
+
+}
+
+
+/* =========================
+   BEAR
+========================= */
+
+.bear {
+
+    font-size: 120px;
+
+    animation: bearBounce 2s infinite;
+
+    filter:
+        drop-shadow(0 10px 10px rgba(0,0,0,0.15));
+}
+
+
+@keyframes bearBounce {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+.name {
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    color: #e83f78;
+
+    margin-top: 10px;
+
+    animation: appear 2s ease;
+
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    font-size: 25px;
+
+    min-height: 70px;
+
+    margin-top: 25px;
+
+    color: #74304d;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    margin-top: 30px;
+
+    padding: 16px 35px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #ff4f88;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(220,50,100,0.3);
+
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+/* =========================
+   FLOWERS
+========================= */
+
+.flowers {
+
+    font-size: 50px;
+
+    margin-top: 25px;
+
+    animation: flowerMove 3s infinite;
+
+}
+
+
+@keyframes flowerMove {
+
+    0%,100% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+
+    display: none;
+
+}
+
+
+.finalText {
+
+    font-size: 32px;
+
+    color: #e83f78;
+
+    font-weight: bold;
+
+    animation: finalPop 1.5s infinite;
+
+}
+
+
+@keyframes finalPop {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+}
+
+
+/* =========================
+   SPARKLES
+========================= */
+
+.sparkle {
+
+    position: fixed;
+
+    font-size: 20px;
+
+    animation: sparkle 2s infinite;
+
+}
+
+
+@keyframes sparkle {
+
+    0%,100% {
+        opacity: 0.3;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- FLOATING HEARTS -->
+
+<div class="heart" style="left:5%; animation-delay:0s;">❤️</div>
+
+<div class="heart" style="left:15%; animation-delay:2s;">💗</div>
+
+<div class="heart" style="left:30%; animation-delay:4s;">💕</div>
+
+<div class="heart" style="left:50%; animation-delay:1s;">💖</div>
+
+<div class="heart" style="left:70%; animation-delay:3s;">❤️</div>
+
+<div class="heart" style="left:90%; animation-delay:5s;">💗</div>
+
+
+<!-- SPARKLES -->
+
+<div class="sparkle" style="top:15%;left:15%;">✨</div>
+
+<div class="sparkle" style="top:25%;right:15%;animation-delay:1s;">✨</div>
+
+<div class="sparkle" style="bottom:20%;left:20%;animation-delay:.5s;">✨</div>
+
+<div class="sparkle" style="bottom:15%;right:20%;animation-delay:1.5s;">✨</div>
+
+
+
+<div class="scene">
+
+<div class="content">
+
+
+<!-- =====================
+     OPENING
+===================== -->
+
+<div id="opening">
+
+    <div class="bear">
+        🧸
+    </div>
+
+    <div class="name">
+        Farisya Irwayu ❤️
+    </div>
+
+    <div class="message">
+        Hi sayang... 🥺
+    </div>
+
+    <div class="flowers">
+        🌷🌸🌷
+    </div>
+
+    <button onclick="start()">
+
+        💌 Tekan Sini
+
+    </button>
+
+</div>
+
+
+
+<!-- =====================
+     MESSAGE
+===================== -->
+
+<div id="story" style="display:none;">
+
+    <div class="bear" id="bear">
+        🧸
+    </div>
+
+    <div class="name">
+        Farisya ❤️
+    </div>
+
+    <div class="message" id="text">
+
+    </div>
+
+    <div class="flowers">
+
+        🌷🌸🌷🌸🌷
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================
+     FINAL
+===================== -->
+
+<div id="final" class="final">
+
+    <div class="bear">
+        🧸
+    </div>
+
+    <div class="finalText">
+
+        Maafkan saya? 🥺❤️
+
+    </div>
+
+    <div class="message">
+
+        Jangan marah lama-lama ya 👉👈
+
+    </div>
+
+    <div class="flowers">
+
+        🌸🌷💗🌷🌸
+
+    </div>
+
+    <div style="font-size:30px;margin-top:20px;">
+
+        I LOVE YOU ❤️
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+const messages = [
+
+    "Saya nak minta maaf... 🥺",
+
+    "Maaf sebab buat awak terasa hati.",
+
+    "Saya tahu saya salah.",
+
+    "Saya tak nak awak sedih.",
+
+    "Saya tak nak kita gaduh.",
+
+    "Saya cuma nak kita baik semula. ❤️",
+
+    "Saya sayang awak sangat-sangat.",
+
+    "Farisya, awak sangat bermakna untuk saya. 💗",
+
+    "Boleh maafkan saya? 🥺👉👈"
+
+];
+
+
+function sleep(ms) {
+
+    return new Promise(resolve =>
+
+        setTimeout(resolve, ms)
+
+    );
+
+}
+
+
+
+async function typeText(text) {
+
+    const box = document.getElementById("text");
+
+    box.innerHTML = "";
+
+
+    for (let letter of text) {
+
+        box.innerHTML += letter;
+
+        await sleep(60);
+
+    }
+
+}
+
+
+
+async function start() {
+
+
+    document.getElementById("opening").style.display = "none";
+
+    document.getElementById("story").style.display = "block";
+
+
+    for (let message of messages) {
+
+
+        await typeText(message);
+
+        await sleep(1500);
+
+
+    }
+
+
+    document.getElementById("story").style.display = "none";
+
+    document.getElementById("final").style.display = "block";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
+```
